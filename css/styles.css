@@ -46,11 +46,11 @@ body {
 }
 
 .carousel {
-    background:#512DA8;
+    background: #512DA8;
 }
 
 .carousel-item {
-  height: 300px;
+  height: 250px;
 }
 
 .carousel-item img {
@@ -58,4 +58,10 @@ body {
     top: 0px;
     left: 0px;
     min-height: 300px;
+}
+
+#carouselButton {
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
 }
