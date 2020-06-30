@@ -65,7 +65,7 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
+            <a id="buttonLogin" type="button" role="button">
               <span class="fa fa-sign-in"></span> Login
             </a>
           </span>
@@ -148,17 +148,7 @@
             <img src="img/logo.png" class="img-fluid" />
           </div>
           <div class="col-12 col-sm align-self-center">
-            <a
-              class="btn btn-warning btn-block btn-sm"
-              data-toggle="modal" 
-              data-target="#reserveBtnModal"
-              data-html="true"
-              data-placement="bottom"
-              href="#reservetable"
-              role="button"
-              >Reserve a Table</a
-            >
-          </div>
+            <a id="buttonReservation" type="button" class="btn btn-warning btn-sm btn-block" role="button">Reserve a Table</a>
         </div>
       </div>
     </header>
@@ -336,7 +326,7 @@
 
       <!-- Reserve Modal Button -->
 
-      <div id="reserveBtnModal" class="modal fade" role="dialog">
+      <div id="reservationFormModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
           <!-- Modal content-->
           <div class="modal-content">
@@ -521,8 +511,7 @@
                 ><i class="fa fa-youtube"></i
               ></a>
               <a class="btn btn-social-icon" href="mailto:"
-                ><i class="fa fa-envelope-o"></i
-              ></a>
+                ><i class="fa fa-envelope-o"></i></a>
             </div>
           </div>
         </div>
@@ -560,7 +549,15 @@
             $('#carouselButton').children('span').addClass('fa-pause');
           }
         });
-      });
+            $("#buttonLogin").click(function(){
+            $('#loginModal').modal('show');
+        });
+
+            $("#buttonReservation").click(function(){
+            $('#reservationFormModal').modal('show');
+          });
+        });
+  
     </script>
 
   </body>
